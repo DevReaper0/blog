@@ -1,0 +1,103 @@
+baseURL: https://blog.devreaper0.github.io/
+languageCode: en
+title: DevReaper0
+
+summarylength: 10
+enableEmoji: true
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# Syntax highlighting
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+
+localizedDates: false
+
+languages:
+  en:
+    contentDir: content/en
+    languageName: English
+    weight: 1
+    menu:
+      main:
+        - name: Archive
+          url: /archives/
+          weight: 5
+        - name: Search
+          url: /search/
+          weight: 10
+        - name: Categories
+          url: /categories/
+          weight: 20
+        - name: Tags
+          url: /tags/
+          weight: 20
+  jp:
+    contentDir: content/jp
+    languageName: 日本語 / Japanese
+    weight: 2
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+
+  homeInfoParams:
+    Title: "Hi there! :wave:"
+    Content: "Welcome to my blog! Here you will find articles on various topics. I hope you find them useful. :smile:"
+
+  socialIcons:
+    - name: github
+      title: View Source on Github
+      url: "https://github.com/DevReaper0/docs"
+
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
